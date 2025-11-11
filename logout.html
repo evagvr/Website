@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <title>Capitala la microscop-Logout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #bab9b9;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #2a356b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #07184f;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <nav class="nav1">
+
+            <ul class="meniu">
+            
+                <li><a href="proiect_tw.html">Home</a></li>
+                <li class="dropdown"><a href="zonesitransport.html">Zone si Transport</a>
+                    <ul class="submeniu">
+                        <li><a href="#zone">Zone</a></li>
+                        <li><a href="#transport">Transport</a></li>
+                    </ul>
+                </li>
+                <li><a href="locatii.html">Locatii</a></li>
+                <li><a href="evenimente.html">Evenimente</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            
+            </ul>  
+            
+        </nav>
+    </div>
+  <div class="container">
+    <h2>Logout</h2>
+    <button id="logoutButton">Logout</button>
+  </div>
+
+  <script>
+    document.getElementById("logoutButton").addEventListener("click", function() {
+      localStorage.removeItem("currentUser"); // Șterge sesiunea utilizatorului
+      alert("Te-ai deconectat!");
+      window.location.href = "login.html"; // Redirecționează la pagina de login
+    });
+  </script>
+</body>
+</html>

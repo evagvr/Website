@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <title>Capitala la microscop-Creare Cont</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+    }
+    label {
+      margin: 10px 0;
+      display: block;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      background-color: #223354;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1b115e;
+    }
+    ul{
+    list-style-type: none;
+}
+
+/*meniu navigare principal*/
+.nav1 {
+    background-color: rgba(71, 71, 71, 0.447);
+    z-index: 100;
+    position: fixed;
+    margin-bottom: 0.7rem;
+}
+ul.meniu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+ul.meniu li {
+    position: relative;
+    z-index: 999;
+}
+ul.meniu a {
+    color: white;
+    padding: 0.3rem 0.4rem;
+    display: block;
+    text-decoration: none;
+}
+ul.meniu a:hover {
+    background-color: rgba(151, 151, 151, 0.532);
+}
+ul.submeniu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(71, 71, 71, 0.447);
+    margin: 0;
+    padding: 0;
+    min-width: 160px;
+    border-radius: 4px;
+}
+ul.submeniu li a {
+    padding: 0.7rem;
+}
+ul.submeniu li a:hover {
+    background-color: rgba(151, 151, 151, 0.532);
+}
+li.dropdown:hover > .submeniu {
+    display: block;
+}
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="nav1">
+
+        <ul class="meniu">
+        
+            <li><a href="proiect_tw.html">Home</a></li>
+            <li class="dropdown"><a href="zonesitransport.html">Zone si Transport</a>
+                <ul class="submeniu">
+                    <li><a href="#zone">Zone</a></li>
+                    <li><a href="#transport">Transport</a></li>
+                </ul>
+            </li>
+            <li><a href="locatii.html">Locatii</a></li>
+            <li><a href="evenimente.html">Evenimente</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        
+        </ul>  
+        
+    </nav>
+</div>
+  <div class="container">
+    <h2>Creează un cont</h2>
+    <form id="signUpForm" style="padding: 5%;">
+      <label for="username">Nume de utilizator</label>
+      <input type="text" id="username" required>
+      
+      <label for="password">Parolă</label>
+      <input type="password" id="password" required>
+      
+      <button type="submit">Crează cont</button>
+    </form>
+    <p id="error-message" style="color: red;"></p>
+  </div>
+
+  <script>
+    document.getElementById("signUpForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      // Obține valorile introduse
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Verifică dacă există deja un cont cu același nume
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      const existingUser = users.find(user => user.username === username);
+
+      if (existingUser) {
+        document.getElementById("error-message").textContent = "Contul există deja!";
+      } else {
+        // Creează un obiect pentru utilizator
+        const newUser = { username, password };
+        users.push(newUser);
+
+        // Salvează utilizatorii în localStorage
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Contul a fost creat cu succes!");
+        window.location.href = "login.html"; // Redirecționează la pagina de login
+      }
+    });
+  </script>
+</body>
+</html>

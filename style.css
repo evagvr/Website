@@ -1,0 +1,832 @@
+/*date generale*/
+html{
+    font-size: 20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "EB Garamond", serif;
+}
+h1{
+    text-shadow: 2px 2px black;
+    color: rgb(248, 248, 248);
+    margin: 1.7rem;
+    outline-color: black;
+}
+p{
+    padding: 1.3rem;
+    margin: 0.7rem;
+}
+h2{
+    color: white;
+    margin-left: 0.8rem;
+    padding: 0.8rem;
+    text-align: right;
+}
+ul{
+    list-style-type: none;
+}
+
+/*meniu navigare principal*/
+.nav1 {
+    background-color: rgba(71, 71, 71, 0.447);
+    z-index: 100;
+    position: fixed;
+    margin-bottom: 0.7rem;
+}
+ul.meniu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+ul.meniu li {
+    position: relative;
+    z-index: 999;
+}
+ul.meniu a {
+    color: white;
+    padding: 0.3rem 0.4rem;
+    display: block;
+    text-decoration: none;
+}
+ul.meniu a:hover {
+    background-color: rgba(151, 151, 151, 0.532);
+}
+ul.submeniu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(71, 71, 71, 0.447);
+    margin: 0;
+    padding: 0;
+    min-width: 160px;
+    border-radius: 4px;
+}
+ul.submeniu li a {
+    padding: 0.7rem;
+}
+ul.submeniu li a:hover {
+    background-color: rgba(151, 151, 151, 0.532);
+}
+li.dropdown:hover > .submeniu {
+    display: block;
+}
+
+/*pagina 1*/
+/*body*/
+.bodyhome{
+    background-color: rgb(156, 140, 183);
+}
+/*header*/
+.headerpag1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pozahome4.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+}
+/*main*/
+.mainpag1{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.mainpag1 h1{
+    font-size: 4rem;
+    color: rgb(206, 206, 247);
+}
+.mainpag1 p{
+    color: white;
+    background-color: black;
+    opacity: 60%;
+}
+.detaliihome{
+    margin-top: 40px;
+    background-color: rgba(54, 16, 62, 0.482);
+    padding: 2rem;
+}
+.detaliihome p{
+    background-color: rgba(240, 255, 255, 0.326);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    opacity: 90%;
+    border: 5px solid rgb(50, 38, 54);
+    margin-right: 10%;
+}
+#detaliihomeimg1{
+    border: 3px solid rgb(69, 47, 65);
+    border-radius: 0.2cm;
+    width: 48%;
+}
+#detaliihomeimg2{
+    border: 3px solid rgb(67, 45, 63);
+    border-radius: 0.2cm;
+    width: 48%;
+}
+#detaliihomeimg3{
+    border: 3px solid rgb(74, 52, 70);
+    border-radius: 0.2cm;
+    width: 100%;
+}
+.helphome{
+    background-color: rgb(44, 37, 53);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.helphome p{
+    background-color: rgb(76, 60, 87);
+    color: rgb(218, 207, 244);
+}
+.helphome a{
+    color: rgb(220, 200, 238);
+}
+.helphome li{
+    padding: 0.5rem;
+}
+.helphome li:nth-of-type(odd){
+    background-color: rgb(174, 155, 190);
+}
+.helphome li:nth-of-type(odd) a{
+    color: rgb(63, 55, 70);
+}
+.helphome li:nth-of-type(even){
+    background-color: rgb(106, 94, 117);
+}
+/*pagina 2*/
+#bodyzonesitransport{
+    background-color: rgb(218, 232, 229);
+}
+/*titlu*/
+#bodyzonesitransport h1{
+    background-color: rgb(73, 77, 75);
+    padding-left: 1.3rem;
+    font-size: 2rem;
+}
+/*sectiunea 1*/
+#zone p{
+    background-color: rgba(244, 250, 250, 0.667);
+}
+#zone{
+    background-color: rgb(132, 145, 141);
+    padding: 1.3rem;
+}
+#zone img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    transition: transform 1s;
+}
+#zone img:hover{
+    transform: scale(2);
+}
+/*sectiunea 2*/
+#transport{
+    background-color: rgb(188, 206, 200);
+    padding: 3rem;
+}
+/*tabel de preturi*/
+#metrorex table, th, td{
+    border: 2px solid rgb(1, 32, 22);
+    border-style: double;
+    margin-left: auto;
+    margin-right: auto;
+}
+#metrorex{
+    background-color: rgb(145, 170, 161);
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+#metrorex h4, h5{
+    background-color: rgb(206, 222, 217);
+    padding: 0.7rem;
+    color: rgb(53, 61, 58);
+}
+#metrorex p{
+    background-color: rgb(35, 59, 51);
+    color: rgb(228, 238, 235);
+    margin: auto;
+}
+#metrorex img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+}
+#metrorex tr:nth-child(1){
+    background-color: rgb(191, 221, 216);
+    color: rgb(60, 69, 66);
+}
+#metrorex tr:nth-of-type(even):hover{
+    background-color: rgb(180, 203, 199);
+}
+#metrorex td:nth-of-type(odd){
+    background-color: rgb(171, 201, 191);
+}
+/*stb*/
+#stb{
+    background-color: rgb(137, 152, 148);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+#stb h4,h5{
+    background-color: rgb(192, 212, 206);
+    padding: 0.7rem;
+}
+#stb p{
+    background-color: rgb(100, 111, 108);
+    color: rgb(203, 225, 218);
+    margin: auto;
+}
+#stb table, th, td{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(35, 59, 51);
+    border-style: double;
+}
+#stb td:nth-of-type(odd){
+    background-color: rgb(157, 179, 172);
+}
+#stb tr:nth-of-type(even):hover{
+    background-color: rgb(114, 125, 121);
+}
+/*tranzitii tabel*/
+td{
+    transition: transform 1s;
+}
+td:hover{
+    transform: scale(1.3);
+}
+/*pagina3*/
+/*header*/
+.headerlocatii{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(fundallocatii.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+}
+/*main*/
+.mainlocatii{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.mainlocatii h1{
+    font-size: 4rem;
+}
+/* meniu navigare*/
+.nav2 ul{
+    overflow: hidden;
+}
+.nav2 a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: larger;
+    display: block;
+}
+.nav2 a:hover{
+    text-decoration: underline;
+    color: rgb(40, 40, 69);
+    background-color: rgb(194, 194, 194);
+}
+.nav2 li{
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid rgb(149, 158, 179);
+    border-radius: 0.2cm;
+    margin: 1rem;
+    display: inline-flex;
+}
+.nav2 li::before{
+    content: "🌂";
+    margin-right: 0.3rem;
+    text-shadow: 2px 2px white;
+}
+.nav2 h3{
+    color: rgb(255, 255, 255);
+    background-color: rgb(126, 114, 158);
+    padding: 2rem;
+}
+.nav2{
+    background-color: rgb(194, 194, 194);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 2rem;
+    height: auto;
+}
+/*sectiuni*/
+.ulcafenele li{
+    box-shadow: 2px 2px black;
+    border: 2px solid rgb(122, 137, 186);
+    border-radius: 0.2cm;
+    padding: 0;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+.ulcafenele li img{
+    padding: 0.5cm;
+}
+.ulcafenele li h4{
+    text-align: center;
+}
+.ulrestaurante li{
+    box-shadow: 2px 2px black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0.2cm;
+    padding: 0;
+    margin-bottom: 2rem;
+    background-color:rgb(122, 137, 186);
+    float: left;
+}
+.ulrestaurante li img{
+    padding: 0.5cm;
+}
+.ulrestaurante li h4{
+    text-align: center;
+}
+.ulparcuri li{
+    box-shadow: 2px 2px black;
+    padding: 0;
+    border: 2px solid rgb(122, 137, 186);
+    border-radius: 0.2cm;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+.ulparcuri li img{
+    padding: 0.5cm;
+}
+.ulparcuri li h4{
+    text-align: center;
+}
+.ulextra li{
+    box-shadow: 2px 2px black;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 0.2cm;
+    margin-bottom: 2rem;
+    background-color:rgb(122, 137, 186);
+}
+.ulextra li img{
+    padding: 0.5cm;
+}
+.ulextra li h4{
+    text-align: center;
+}
+.ulextra li{
+    float: left;
+}
+#cafenele{
+    background-color: rgb(71, 71, 71);
+}
+#cafenele h2{
+    background-color: rgb(118, 118, 197);
+}
+#restaurante{
+    background-color: rgb(161, 161, 161);
+}
+#restaurante h2{
+    background-color: rgb(118, 118, 197);
+}
+#parcuri{
+    background-color: rgb(216, 216, 216);
+}
+#parcuri h2{
+    background-color: rgb(118, 118, 197);
+}
+#parcuri p{
+    background-color: rgb(255, 255, 255);
+    color: rgb(84, 61, 97);
+}
+#extra{
+    background-color: rgb(62, 62, 62);
+}
+#extra h2{
+    background-color: rgb(118, 118, 197);
+}
+#cafenele a, #restaurante a, #parcuri a, #extra a{
+    color: black;
+    font-size: larger;
+}
+/*aranjare locatii pagina 3*/
+.ulcafenele{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ulcafenele li{
+    flex: 1;
+    text-align: center;
+    margin: 1.3rem;
+}
+.ulrestaurante{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ulrestaurante li{
+    flex: 1;
+    text-align: center;
+    margin: 1.3rem;
+}
+.ulparcuri{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ulparcuri li{
+    flex: 1;
+    text-align: center;
+    margin: 1.3rem;
+}
+.ulextra{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ulextra li{
+    flex: 1;
+    text-align: center;
+    margin: 1.3rem;
+}
+/*footer*/
+.footerlocatii h2{
+    background-color: rgb(62, 49, 67);
+}
+.footerlocatii{
+    background-color: rgb(188, 188, 188);
+}
+.footerlocatii a{
+    color: black;
+}
+.footerlocatii a:hover{
+    color: white;
+}
+/*pagina 4*/
+/*header*/
+.bodyev{
+    background-color: rgb(0, 24, 29);
+}
+.headerev{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(evenimentetheme.webp );
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+}
+
+/*main*/
+.mainev{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+.mainev h1{
+    font-size: 4em;
+}
+.mainev p{
+    color: white;
+    font-size: 1em;
+}
+/*calendar evenimente*/
+.ext1, .ext2, .ext3, .ext4, .ext5, .ext6, .ext7, .ext8, .ext9, .ext10, .ext11, .ext12, .ext13{
+    list-style-type: circle;
+    background-color: rgb(30, 46, 46);
+    padding: 2rem;
+    z-index: 1;
+}
+
+.lista_evenimente li{
+    margin-bottom: 20px;
+    width: fit-content;
+    z-index: 1;
+}
+/*titlu*/
+.titluev{
+    background-color: rgb(10, 72, 84);
+    margin: 3rem;
+}
+/*titluri luni*/
+.luna{
+    background-color: rgb(29, 119, 137);
+    margin: 0;
+    margin-bottom: 2.3rem;
+    z-index: 1;
+}
+.lista_evenimente{
+    width: 100%s;
+}
+.februarie li{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+}
+.ianuarie li{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+}
+.martie li{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+}
+.mai li{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+}
+.piun{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+    width: fit-content;
+}
+.piul{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    z-index: 1;
+}
+.aprilie li{
+    background-color: rgb(59, 158, 158);
+    color: white;
+    padding: 0.3rem;
+    width: 100%;
+    z-index: 1;
+}
+.lista_evenimente{
+    background-color: rgb(47, 78, 78);
+}
+.lista_evenimente img{
+    height: 8em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+/*pagina 5*/
+/*body*/
+#bodycontact{
+    background-color: rgb(190, 176, 152);
+}
+/*header*/
+#headercontact{
+    background-color: rgb(230, 223, 215);
+    padding: 1.9rem;
+}
+#headercontact h1{
+    background-color: rgb(94, 89, 81);
+    margin-top: 1.3rem;
+}
+#headercontact p{
+    background-color: rgb(249, 238, 224);
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+.coloana{
+    flex: 1;
+    padding: 1.3rem;
+    border: 5px solid white;
+}
+.container h3{
+    color: white;
+    font-style: oblique;
+}
+.container a{
+    color: rgb(78, 68, 57);
+    background-color: rgba(255, 255, 255, 0.632);
+    text-decoration: none;
+    padding: 0.2rem;
+}
+.container a:hover{
+    color: rgb(49, 45, 39);
+}
+.container button{
+    color: white;
+    background-color: rgb(192, 168, 125);
+    border-color: white;
+    font-style: italic;
+}
+/*tranzitii pagina 5*/
+#headercontact h1::after{
+    content: "✉️";
+    margin-left: 0.5rem;
+    display: inline-block;
+    transition: transform 1s ease;
+}
+#headercontact h1:hover::after{
+    transform: rotate(360deg);
+}
+.mail{
+    transition: font-weight 0.5s, font-size 1s, border-color 0.2s, background-color 0.3s;
+}
+.mail:hover{
+    font-weight: bold;
+    font-size: larger;
+    border-color: blanchedalmond;
+    background-color: rgb(250, 245, 236);
+}
+/*animatii*/
+/*animatii titlu pagina 1*/
+@keyframes animatietitlu {
+    from{top: -13rem;}
+    to{top: 0;}
+}
+.mainpag1 h1{
+    position: relative;
+    animation-name: animatietitlu;
+    animation-duration: 3s;  
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+/*animatii paragraf pagina 1*/
+@keyframes animatiep{
+    from{left: -19rem;}
+    to{left: 0;}
+}
+.mainpag1 p{
+    position: relative;
+    animation-name: animatiep;
+    animation-duration: 5s;  
+    animation-fill-mode: both;
+}
+/*animatii imagini pagina 2*/
+@keyframes animatieimagini{
+    from{left: -19rem;}
+    to{left: 0;}
+}
+#bodyzonesitransport img{
+    position: relative;
+    animation-name: animatieimagini;
+    animation-duration: 10s;  
+    z-index: 1;
+    
+}
+@keyframes animatiezone{
+    from{top:-0.3rem;}
+    to{top: 0;}
+}
+#bodyzonesitransport h1{
+    position: relative;
+    z-index: 1;
+    animation-name: animatiezone;
+    animation-duration: 1s;
+    animation-timing-function: linear;;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/*animatii pagina 4*/
+@keyframes animatieevenimenteimpar{
+    from{right: -7rem;}
+    to{right: 0;}
+}
+.lista_evenimente li:nth-of-type(odd){
+    position: relative;
+    animation-name: animatieevenimenteimpar;
+    animation-duration: 5s;  
+    animation-fill-mode: both;
+    z-index: 1;
+}
+/*animatii pagina 5*/
+@keyframes animatietitlucontact{
+    from{text-decoration: none;}
+    to{text-decoration: underline;}
+}
+#bodycontact h1{
+    position: relative;
+    z-index: 1;
+    animation-name: animatietitlucontact;
+    animation-duration: 3s;
+    animation-timing-function: linear;;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/*tranzitie pagina 3*/
+#cafenele li{
+    transition: transform 1s;
+}
+#cafenele li:hover{
+    transform: scale(1.1);
+}
+#restaurante li{
+    transition: transform 1s;
+}
+#restaurante li:hover{
+    transform: scale(1.1);
+}
+#parcuri li{
+    transition: transform 1s;
+}
+#parcuri li:hover{
+    transform: scale(1.1);
+}
+#extra li{
+    transition: transform 1s;
+}
+#extra li:hover{
+    transform: scale(1.1);
+}
+/*media-queries*/
+@media (max-width:768px){
+    .ulcafenele{
+        flex-direction: column;
+    }
+    .ulrestaurante{
+        flex-direction: column;
+    }
+    .ulparcuri{
+        flex-direction: column;
+    }
+    .ulextra{
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+    html{
+        font-size: 16px;
+    }
+}
+/*fundal svg*/
+#mapSVG{
+    background-image: url(harta-bucuresti.png);
+    background-size: cover;
+    background-position: center;
+}
+#mapSVG text{
+    text-shadow: 1px 1px rgb(255, 255, 255);
+    text-decoration: underline;
+}
+#drawCanvas{
+    background-image: url(Bucuresti.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    color: rgb(75, 16, 16);
+}
+.element {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+.element:hover {
+    background-color: #c2aace;
+}
+.element:focus {
+    outline: none;
+    background-color: #484061;
+}
+button{
+    border: 0;
+
+}
+.buttonzonasitransport{
+    color: rgb(30, 58, 49);
+    background-color: rgb(194, 224, 214);
+}

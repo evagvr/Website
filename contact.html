@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/jpg" href="favicon.jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+        <title>Capitala la microscop-Contact</title>
+
+    </head>
+
+    <body id="bodycontact">
+
+        <nav class="nav1">
+
+            <ul class="meniu">
+        
+            <li><a href="proiect_tw.html">Home</a></li>
+            <li class="dropdown">
+                <a href="zonesitransport.html">Zone si Transport</a>
+                <ul class="submeniu">
+                    <li><a href="#zone">Zone</a></li>
+                    <li><a href="#transport">Transport</a></li>
+                </ul>
+            </li>
+            <li><a href="locatii.html">Locatii</a></li>
+            <li><a href="evenimente.html">Evenimente</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        
+            </ul>  
+        
+        </nav>
+        
+        <div id="headercontact">
+            
+            <h1>Date de contact</h1>
+            <p>Daca aveti nelamuriri sau doriti sa oferiti feedback puteti trimite un email sau scrie un comentariu.</p>
+
+        </div>
+
+        <div class="container">
+
+            <div class="coloana"> 
+                <h3>email:</h3>
+                <a class="mail" href="mailto:abcd@gmail.com">Trimite mail</a>
+            </div>
+
+            <div class="coloana">
+
+                <h3>Completeaza aici: </h3>
+                <form id="formular" class="formular" action="/submit" method="POST">
+                    <label for="nume">Nume: </label>
+                    <input type="text" id="nume" name="name" placeholder="Scrie numele" required>
+                    <span id="eroare-nume" style="color: grey; font-size: 0.8rem;"></span>
+                    <br><br>
+
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Adresa ta de email" required>
+                    <span id="eroare-email" style="color: grey; font-size: 0.8rem;"></span>
+                    <br><br>
+                    
+                    <label for="mesaj">Mesaj: </label>
+                    <textarea id="mesaj" name="message" rows="6" cols="40" placeholder="Mesajul tau" required></textarea>
+                    <span id="eroare-mesaj" style="color: grey; font-size: 0.8rem;"></span>
+                    <br><br>
+                    <button id="butonsend" type="submit">Trimite</button>
+                </form>
+               
+
+            </div>
+
+        </div>
+        <script>
+            document.getElementById('formular').addEventListener('submit', function(event){
+    let isValid = true;
+    const nume = document.getElementById('nume').value.trim();
+    const numeEroare = document.getElementById('eroare-nume');
+    const numeRegex = /^[A-Za-z\s'-]{3,50}$/; // Accepta doar litere, spatii, apostrof si cratima
+    if (!numeRegex.test(nume)) {
+        isValid = false;
+        numeEroare.textContent = 'Numele trebuie să aibă între 3 și 50 de caractere și să conțină doar litere!';
+    } else {
+        numeEroare.textContent = '';
+    }
+
+    //validare pentru "Email"
+    const email = document.getElementById('email').value.trim();
+const emailEroare = document.getElementById('eroare-email');
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+if (!emailRegex.test(email)) {
+    isValid = false;
+    emailEroare.textContent = 'Introduceți o adresă de email validă!';
+} else {
+    emailEroare.textContent = '';
+}
+
+//validare pentru campul "Mesaj"
+const mesaj = document.getElementById('mesaj').value.trim();
+const mesajEroare = document.getElementById('eroare-mesaj');
+if (mesaj.length < 10) {
+    isValid = false;
+    mesajEroare.textContent = 'Mesajul trebuie să aibă cel puțin 10 caractere!';
+} else {
+    mesajEroare.textContent = '';
+}
+
+// previne trimiterea formularului daca exista erori
+if (!isValid) {
+    event.preventDefault();
+}
+});
+        </script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

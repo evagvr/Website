@@ -1,0 +1,39 @@
+[
+    {
+      "tip": "Card 1 calatorie",
+      "pret": "3 ron"
+    },
+    {
+      "tip": "Card 2 calatorii",
+      "pret": "6 ron"
+    },
+    {
+      "tip": "Card 24 ore",
+      "pret": "8 ron"
+    },
+    {
+      "tip": "Card 72 ore",
+      "pret": "20 ron"
+    },
+    {
+      "tip": "Card 10 calatorii",
+      "pret": "25 ron"
+    },
+    {
+      "tip": "Abonament 1 saptamana",
+      "pret": "30 ron"
+    },
+    {
+      "tip": "Abonament 1 luna",
+      "pret": "80 ron"
+    },
+    {
+      "tip": "Abonament bi-anual",
+      "pret": "400 ron"
+    },
+    {
+      "tip": "Abonament anual",
+      "pret": "700 ron"
+    }
+  ]
+  
